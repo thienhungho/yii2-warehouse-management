@@ -1,0 +1,24 @@
+{
+    "name": "thienhungho/yii2-warehouse-management",
+    "description": "Yii2 Warehouse Management",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","warehouse", "management"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "thienhungho",
+            "email": "thienhungho@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "yiisoft/yii2": "~2.0.9",
+        "thienhungho/yii2-app-core": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "thienhungho\\WarehouseManagement\\": "src/"
+        },
+        "files": ["src/functions/core.php", "src/const/core.php"]
+    }
+}
