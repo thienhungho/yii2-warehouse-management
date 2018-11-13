@@ -72,7 +72,7 @@ $this->registerJs($search);
             'attribute' => 'feature_img',
             'value'     => function($model, $key, $index, $column) {
                 return Html::a(
-                    '<img style="max-width: 100px;" src=/' . \common\modules\media\Media::getOtherSizePath('thumbnail', $model->feature_img) . '>',
+                    '<img style="max-width: 100px;" src=/' . get_other_img_size_path('thumbnail', $model->feature_img) . '>',
                     \yii\helpers\Url::to([
                         'update',
                         $model->id,

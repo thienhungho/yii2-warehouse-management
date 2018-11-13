@@ -33,14 +33,26 @@ Add module WarehouseManage to your `AppConfig` file.
     /**
      * Supplier Manage
      */
+     'supplier-manage' => [
+        'class' => 'thienhungho\SupplierManagement\modules\SupplierManage\SupplierManageModules',
+     ],
+     /**
+      * Employee Manage
+      */
+     'employee-manage' => [
+        'class' => 'thienhungho\EmployeeManagement\modules\EmployeeManage\EmployeeManageModules',
+     ],
+     /**
+      * Warehouse Manage
+      */
     'warehouse-manage' => [
-        'class' => 'BaseApp\warehouse\modules\WarehouseManage\WarehouseManageModule',
+        'class' => 'thienhungho\WarehouseManagement\modules\WarehouseManage\WarehouseManageModule',
      ],
     /**
-     * Supplier Manage
+     * Warehouse Voucher Manage
      */
     'warehouse-voucher-manage' => [
-        'class' => 'BaseApp\warehouse\modules\WarehouseVoucherManage\WarehouseVoucherManageModules',
+        'class' => 'thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\WarehouseVoucherManageModules',
     ],
     ...
 ],

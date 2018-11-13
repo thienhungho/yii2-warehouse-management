@@ -13,7 +13,9 @@
     "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2": "~2.0.9",
-        "thienhungho/yii2-app-core": "*"
+        "thienhungho/yii2-app-core": "*",
+        "thienhungho/yii2-supplier-management": "*",
+        "thienhungho/yii2-employee-management": "*"
     },
     "autoload": {
         "psr-4": {
