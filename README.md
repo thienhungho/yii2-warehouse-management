@@ -30,30 +30,30 @@ Add module WarehouseManage to your `AppConfig` file.
 ...
 'modules'          => [
     ...
-    /**
-     * Supplier Manage
-     */
-     'supplier-manage' => [
-        'class' => 'thienhungho\SupplierManagement\modules\SupplierManage\SupplierManageModules',
-     ],
-     /**
-      * Employee Manage
-      */
-     'employee-manage' => [
-        'class' => 'thienhungho\EmployeeManagement\modules\EmployeeManage\EmployeeManageModules',
-     ],
-     /**
-      * Warehouse Manage
-      */
-    'warehouse-manage' => [
-        'class' => 'thienhungho\WarehouseManagement\modules\WarehouseManage\WarehouseManageModule',
-     ],
-    /**
-     * Warehouse Voucher Manage
-     */
-    'warehouse-voucher-manage' => [
-        'class' => 'thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\WarehouseVoucherManageModules',
-    ],
+        /**
+         * Supplier Manage
+         */
+        'supplier-manage' => [
+            'class' => 'thienhungho\SupplierManagement\modules\SupplierManage\SupplierManageModules',
+        ],
+        /**
+         * Supplier Manage
+         */
+        'employee-manage' => [
+            'class' => 'thienhungho\EmployeeManagement\modules\EmployeeManage\EmployeeManageModules',
+        ],
+        /**
+         * Supplier Manage
+         */
+        'warehouse-manage' => [
+            'class' => 'thienhungho\WarehouseManagement\modules\WarehouseManage\WarehouseManageModule',
+        ],
+        /**
+         * Supplier Manage
+         */
+        'warehouse-voucher-manage' => [
+            'class' => 'thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\WarehouseVoucherManageModules',
+        ],
     ...
 ],
 ...
