@@ -7,7 +7,7 @@ namespace thienhungho\WarehouseManagement\modules\WarehouseBase\query;
  *
  * @see \thienhungho\WarehouseManagement\modules\WarehouseBase\query\WarehouseVoucher
  */
-class WarehouseVoucherQuery extends \yii\db\ActiveQuery
+class WarehouseVoucherQuery extends \thienhungho\ActiveQuery\models\ActiveQuery
 {
     /*public function active()
     {

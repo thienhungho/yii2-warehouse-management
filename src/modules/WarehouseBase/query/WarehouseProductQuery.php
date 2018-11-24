@@ -7,7 +7,7 @@ namespace thienhungho\WarehouseManagement\modules\WarehouseBase\query;
  *
  * @see \thienhungho\WarehouseManagement\modules\WarehouseBase\query\WarehouseProduct
  */
-class WarehouseProductQuery extends \yii\db\ActiveQuery
+class WarehouseProductQuery extends \thienhungho\ActiveQuery\models\ActiveQuery
 {
     /*public function active()
     {
