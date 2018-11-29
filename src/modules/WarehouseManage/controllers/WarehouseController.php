@@ -33,7 +33,7 @@ class WarehouseController extends Controller
     public function actionIndex()
     {
         $searchModel = new WarehouseSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = $searchModel->search(request()->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -64,7 +64,7 @@ class WarehouseController extends Controller
             'status' => STATUS_ACTIVE
         ]);
 
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+        if ($model->loadAll(request()->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -82,13 +82,13 @@ class WarehouseController extends Controller
      */
     public function actionUpdate($id)
     {
-        if (Yii::$app->request->post('_asnew') == '1') {
+        if (request()->post('_asnew') == '1') {
             $model = new Warehouse();
         }else{
             $model = $this->findModel($id);
         }
 
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+        if ($model->loadAll(request()->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -152,11 +152,11 @@ class WarehouseController extends Controller
     public function actionSaveAsNew($id) {
         $model = new Warehouse();
 
-        if (Yii::$app->request->post('_asnew') != '1') {
+        if (request()->post('_asnew') != '1') {
             $model = $this->findModel($id);
         }
     
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+        if ($model->loadAll(request()->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('saveAsNew', [

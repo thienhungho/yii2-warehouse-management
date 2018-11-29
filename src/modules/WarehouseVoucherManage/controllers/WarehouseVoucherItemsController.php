@@ -33,7 +33,7 @@ class WarehouseVoucherItemsController extends Controller
     public function actionIndex()
     {
         $searchModel = new WarehouseVoucherItemsSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = $searchModel->search(request()->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -63,7 +63,7 @@ class WarehouseVoucherItemsController extends Controller
     {
         $model = new WarehouseVoucherItems();
 
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+        if ($model->loadAll(request()->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -80,13 +80,13 @@ class WarehouseVoucherItemsController extends Controller
      */
     public function actionUpdate($id)
     {
-        if (Yii::$app->request->post('_asnew') == '1') {
+        if (request()->post('_asnew') == '1') {
             $model = new WarehouseVoucherItems();
         }else{
             $model = $this->findModel($id);
         }
 
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+        if ($model->loadAll(request()->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -150,11 +150,11 @@ class WarehouseVoucherItemsController extends Controller
     public function actionSaveAsNew($id) {
         $model = new WarehouseVoucherItems();
 
-        if (Yii::$app->request->post('_asnew') != '1') {
+        if (request()->post('_asnew') != '1') {
             $model = $this->findModel($id);
         }
     
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+        if ($model->loadAll(request()->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('saveAsNew', [

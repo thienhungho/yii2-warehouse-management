@@ -216,7 +216,7 @@ use \thienhungho\WarehouseManagement\modules\WarehouseBase\WarehouseVoucher;
                     'value' => '1',
                     'name'  => '_asnew',
                 ]) ?><?php endif; ?>
-            <?= Html::a(Yii::t('app', 'Cancel'), Yii::$app->request->referrer, ['class' => 'btn btn-danger']) ?>
+            <?= Html::a(Yii::t('app', 'Cancel'), request()->referrer, ['class' => 'btn btn-danger']) ?>
         </div>
     </div>
 

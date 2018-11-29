@@ -90,7 +90,7 @@ class WarehouseProductController extends Controller
      */
     public function actionUpdate($id)
     {
-        if (Yii::$app->request->post('_asnew') == '1') {
+        if (request()->post('_asnew') == '1') {
             $model = new WarehouseProduct();
         } else {
             $model = $this->findModel($id);

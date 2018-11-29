@@ -110,7 +110,7 @@ class WarehouseVoucherController extends Controller
      */
     public function actionUpdate($id)
     {
-        if (Yii::$app->request->post('_asnew') == '1') {
+        if (request()->post('_asnew') == '1') {
             $model = new WarehouseVoucher();
         } else {
             $model = $this->findModel($id);
@@ -261,10 +261,10 @@ class WarehouseVoucherController extends Controller
     public function actionSaveAsNew($id)
     {
         $model = new WarehouseVoucher();
-        if (Yii::$app->request->post('_asnew') != '1') {
+        if (request()->post('_asnew') != '1') {
             $model = $this->findModel($id);
         }
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+        if ($model->loadAll(request()->post()) && $model->saveAll()) {
             $model->total_price = WarehouseVoucherItems::find()
                 ->where(['warehouse_voucher' => $model->id])
                 ->sum('total_price');
@@ -305,9 +305,11 @@ class WarehouseVoucherController extends Controller
      */
     public function actionAddWarehouseVoucherItems()
     {
-        if (Yii::$app->request->isAjax) {
-            $row = Yii::$app->request->post('WarehouseVoucherItems');
-            if ((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
+        if (request()->isAjax) {
+            $row = request()->post('WarehouseVoucherItems');
+            if ((request()->post('isNewRecord')
+                    && request()->post('_action') == 'load'
+                    && empty($row)) || request()->post('_action') == 'add')
                 $row[] = [];
 
             return $this->renderAjax('_formWarehouseVoucherItems', ['row' => $row]);

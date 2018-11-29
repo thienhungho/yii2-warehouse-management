@@ -58,7 +58,7 @@ use yii\widgets\ActiveForm;
     <?php if(Yii::$app->controller->action->id != 'create'): ?>
         <?= Html::submitButton(Yii::t('app', 'Save As New'), ['class' => 'btn btn-info', 'value' => '1', 'name' => '_asnew']) ?>
     <?php endif; ?>
-        <?= Html::a(Yii::t('app', 'Cancel'), Yii::$app->request->referrer , ['class'=> 'btn btn-danger']) ?>
+        <?= Html::a(Yii::t('app', 'Cancel'), request()->referrer , ['class'=> 'btn btn-danger']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
