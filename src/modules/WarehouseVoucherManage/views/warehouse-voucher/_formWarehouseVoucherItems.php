@@ -68,7 +68,7 @@
                 'type'          => TabularForm::INPUT_WIDGET,
                 'widgetClass'   => \kartik\widgets\Select2::className(),
                 'options'       => [
-                    'data'    => \yii\helpers\ArrayHelper::map(\BaseApp\ecommerce\modules\ProductBase\ProductUnit::find()->orderBy('name')->asArray()->all(), 'id', 'name'),
+                    'data'    => \yii\helpers\ArrayHelper::map(\thienhungho\ProductManagement\models\ProductUnit::find()->orderBy('name')->asArray()->all(), 'id', 'name'),
                     'options' => ['placeholder' => Yii::t('app', 'Choose Product unit')],
                 ],
                 'columnOptions' => ['width' => '120px'],

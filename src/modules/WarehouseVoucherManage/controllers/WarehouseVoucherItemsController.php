@@ -1,10 +1,10 @@
 <?php
 
-namespace \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\controllers;
+namespace thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\controllers;
 
 use Yii;
 use thienhungho\WarehouseManagement\modules\WarehouseBase\WarehouseVoucherItems;
-use \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherItemsSearch;
+use thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherItemsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

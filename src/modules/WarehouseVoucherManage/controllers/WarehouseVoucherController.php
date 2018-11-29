@@ -1,10 +1,10 @@
 <?php
 
-namespace \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\controllers;
+namespace thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\controllers;
 
 use thienhungho\WarehouseManagement\modules\WarehouseBase\WarehouseVoucher;
 use thienhungho\WarehouseManagement\modules\WarehouseBase\WarehouseVoucherItems;
-use \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherSearch;
+use thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherSearch;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

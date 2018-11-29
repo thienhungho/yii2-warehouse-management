@@ -1,9 +1,9 @@
 <?php
 
-namespace \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\controllers;
+namespace thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\controllers;
 
 use thienhungho\WarehouseManagement\modules\WarehouseBase\WarehouseProduct;
-use \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseProductSearch;
+use thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseProductSearch;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

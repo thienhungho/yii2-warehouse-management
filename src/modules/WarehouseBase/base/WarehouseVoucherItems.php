@@ -2,7 +2,7 @@
 
 namespace thienhungho\WarehouseManagement\modules\WarehouseBase\base;
 
-use BaseApp\ecommerce\modules\ProductBase\ProductUnit;
+use thienhungho\ProductManagement\models\ProductUnit;
 use Yii;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;

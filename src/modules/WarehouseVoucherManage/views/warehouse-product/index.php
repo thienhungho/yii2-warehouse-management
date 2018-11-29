@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-/* @var $searchModel \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseProductSearch */
+/* @var $searchModel thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseProductSearch */
 
 /* @var $dataProvider yii\data\ActiveDataProvider */
 

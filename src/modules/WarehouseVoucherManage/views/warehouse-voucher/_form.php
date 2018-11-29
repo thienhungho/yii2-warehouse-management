@@ -136,7 +136,7 @@ use \thienhungho\WarehouseManagement\modules\WarehouseBase\WarehouseVoucher;
         <?= $form->field($model, 'supplier_id', [
             'addon' => ['prepend' => ['content' => '<span class="fa fa-map-marker"></span>']],
         ])->widget(\kartik\widgets\Select2::classname(), [
-            'data'          => \yii\helpers\ArrayHelper::map(\BaseApp\warehouse\modules\SupplierBase\Supplier::find()
+            'data'          => \yii\helpers\ArrayHelper::map(\thienhungho\SupplierManagement\models\Supplier::find()
                 ->select([
                     'id',
                     'name',

@@ -1,6 +1,6 @@
 <?php
 
-namespace \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage;
+namespace thienhungho\WarehouseManagement\modules\WarehouseVoucherManage;
 
 /**
  * WarehouseVoucherManage module definition class
@@ -10,7 +10,7 @@ class WarehouseVoucherManageModules extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = '\thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\controllers';
+    public $controllerNamespace = 'thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\controllers';
 
     /**
      * {@inheritdoc}

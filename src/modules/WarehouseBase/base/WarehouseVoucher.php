@@ -3,7 +3,7 @@
 namespace thienhungho\WarehouseManagement\modules\WarehouseBase\base;
 
 use thienhungho\EmployeeManagement\modules\EmployeeBase\Employee;
-use BaseApp\warehouse\modules\SupplierBase\Supplier;
+use \thienhungho\SupplierManagement\models\Supplier;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;

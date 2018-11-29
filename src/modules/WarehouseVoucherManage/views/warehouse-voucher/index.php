@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-/* @var $searchModel \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherSearch */
+/* @var $searchModel thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherSearch */
 
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
@@ -133,7 +133,7 @@ $this->registerJs($search);
                 return $model->supplier->name;
             },
             'filterType'          => GridView::FILTER_SELECT2,
-            'filter'              => \yii\helpers\ArrayHelper::map(\BaseApp\warehouse\modules\SupplierBase\Supplier::find()
+            'filter'              => \yii\helpers\ArrayHelper::map(\thienhungho\SupplierManagement\models\Supplier::find()
                 ->asArray()
                 ->all(), 'id', 'name'),
             'filterWidgetOptions' => [

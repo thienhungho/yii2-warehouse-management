@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherSearch */
+/* @var $model thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'name')->textInput(['maxlength' => true, 'placeholder' => 'Name']) ?>
 
     <?= $form->field($model, 'warehouse_id')->widget(\kartik\widgets\Select2::classname(), [
-        'data' => \yii\helpers\ArrayHelper::map(\thienhungho\WarehouseManagement\modules\WarehouseBase\Warehouse::find()->orderBy('id')->asArray()->all(), 'id', 'name'),
+        'data' => \yii\helpers\ArrayHelper::map(\thienhungho\WarehouseManagement\models\Warehouse::find()->orderBy('id')->asArray()->all(), 'id', 'name'),
         'options' => ['placeholder' => Yii::t('app', 'Choose Warehouse')],
         'pluginOptions' => [
             'allowClear' => true
@@ -28,7 +28,7 @@ use yii\widgets\ActiveForm;
     ]); ?>
 
     <?= $form->field($model, 'employee_id')->widget(\kartik\widgets\Select2::classname(), [
-        'data' => \yii\helpers\ArrayHelper::map(\thienhungho\EmployeeManagement\modules\EmployeeBase\Employee::find()->orderBy('id')->asArray()->all(), 'id', 'id'),
+        'data' => \yii\helpers\ArrayHelper::map(\thienhungho\EmployeeManagement\models\Employee::find()->orderBy('id')->asArray()->all(), 'id', 'id'),
         'options' => ['placeholder' => Yii::t('app', 'Choose Employee')],
         'pluginOptions' => [
             'allowClear' => true
@@ -36,7 +36,7 @@ use yii\widgets\ActiveForm;
     ]); ?>
 
     <?= $form->field($model, 'supplier_id')->widget(\kartik\widgets\Select2::classname(), [
-        'data' => \yii\helpers\ArrayHelper::map(\BaseApp\warehouse\modules\SupplierBase\Supplier::find()->orderBy('id')->asArray()->all(), 'id', 'name'),
+        'data' => \yii\helpers\ArrayHelper::map(\thienhungho\SupplierManagement\models\Supplier::find()->orderBy('id')->asArray()->all(), 'id', 'name'),
         'options' => ['placeholder' => Yii::t('app', 'Choose Supplier')],
         'pluginOptions' => [
             'allowClear' => true

@@ -34,7 +34,7 @@ use yii\widgets\ActiveForm;
     ]); ?>
 
     <?= $form->field($model, 'product_unit')->widget(\kartik\widgets\Select2::classname(), [
-        'data' => \yii\helpers\ArrayHelper::map(\BaseApp\ecommerce\modules\ProductBase\ProductUnit::find()->orderBy('id')->asArray()->all(), 'id', 'name'),
+        'data' => \yii\helpers\ArrayHelper::map(\thienhungho\ProductManagement\models\ProductUnit::find()->orderBy('id')->asArray()->all(), 'id', 'name'),
         'options' => ['placeholder' => Yii::t('app', 'Choose Product unit')],
         'pluginOptions' => [
             'allowClear' => true

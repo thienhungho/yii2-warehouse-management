@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherItemsSearch */
+/* @var $model thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherItemsSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 

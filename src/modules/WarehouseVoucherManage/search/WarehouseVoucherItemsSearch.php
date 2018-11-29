@@ -1,13 +1,13 @@
 <?php
 
-namespace \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search;
+namespace thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search;
 
 use thienhungho\WarehouseManagement\modules\WarehouseBase\WarehouseVoucherItems;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * \thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherItemsSearch represents the model behind the
+ * thienhungho\WarehouseManagement\modules\WarehouseVoucherManage\search\WarehouseVoucherItemsSearch represents the model behind the
  * search form about `thienhungho\WarehouseManagement\modules\WarehouseBase\WarehouseVoucherItems`.
  */
 class WarehouseVoucherItemsSearch extends WarehouseVoucherItems
