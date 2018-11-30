@@ -86,4 +86,17 @@ class WarehouseVoucherItems extends BaseWarehouseVoucherItems
         return false;
     }
 
+    /**
+     * @param bool $insert
+     * @param array $changedAttributes
+     */
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+        $warehousVoucher = $this->warehouseVoucher;
+        $warehousVoucher->total_price = WarehouseVoucherItems::find()
+            ->where(['warehouse_voucher' => $this->warehouse_voucher])
+            ->sum('total_price');
+        $warehousVoucher->save();
+    }
 }

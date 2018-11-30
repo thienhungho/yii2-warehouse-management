@@ -81,10 +81,6 @@ class WarehouseVoucherController extends Controller
         ]);
         if ($model->loadAll(request()->post())) {
             if ($model->saveAll()) {
-                $model->total_price = WarehouseVoucherItems::find()
-                    ->where(['warehouse_voucher' => $model->id])
-                    ->sum('total_price');
-                $model->save();
                 set_flash_has_been_saved();
 
                 return $this->redirect([
@@ -117,10 +113,6 @@ class WarehouseVoucherController extends Controller
         }
         if ($model->loadAll(request()->post())) {
             if ($model->saveAll()) {
-                $model->total_price = WarehouseVoucherItems::find()
-                    ->where(['warehouse_voucher' => $model->id])
-                    ->sum('total_price');
-                $model->save();
                 set_flash_has_been_saved();
 
                 return $this->redirect([
@@ -264,21 +256,23 @@ class WarehouseVoucherController extends Controller
         if (request()->post('_asnew') != '1') {
             $model = $this->findModel($id);
         }
-        if ($model->loadAll(request()->post()) && $model->saveAll()) {
-            $model->total_price = WarehouseVoucherItems::find()
-                ->where(['warehouse_voucher' => $model->id])
-                ->sum('total_price');
-            $model->save();
 
-            return $this->redirect([
-                'view',
-                'id' => $model->id,
-            ]);
-        } else {
-            return $this->render('saveAsNew', [
-                'model' => $model,
-            ]);
+        if ($model->loadAll(request()->post())) {
+            if ($model->saveAll()) {
+                set_flash_has_been_saved();
+
+                return $this->redirect([
+                    'update',
+                    'id' => $model->id,
+                ]);
+            } else {
+                set_flash_has_not_been_saved();
+            }
         }
+
+        return $this->render('saveAsNew', [
+            'model' => $model,
+        ]);
     }
 
     /**
