@@ -121,12 +121,17 @@ class WarehouseVoucher extends BaseWarehouseVoucher
                 }
             }
 
-            if (empty($this->total_price)) {
-                $this->total_price = 0;
-            }
-            if (!$this->isNewRecord) {
-                $this->total_price = WarehouseVoucherItems::find()->where(['warehouse_voucher' => $this->id])->sum('total_price');
-            }
+            return true;
+        }
+
+        return false;
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        if (parent::afterSave($insert, $changedAttributes)) {
+            $this->total_price = WarehouseVoucherItems::find()->where(['warehouse_voucher' => $this->id])->sum('total_price');
+            $this->save();
 
             return true;
         }
