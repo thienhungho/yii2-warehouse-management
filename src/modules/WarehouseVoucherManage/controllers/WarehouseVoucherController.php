@@ -81,6 +81,10 @@ class WarehouseVoucherController extends Controller
         ]);
         if ($model->loadAll(request()->post())) {
             if ($model->saveAll()) {
+                $model->total_price = WarehouseVoucherItems::find()
+                    ->where(['warehouse_voucher' => $model->id])
+                    ->sum('total_price');
+                $model->save();
                 set_flash_has_been_saved();
 
                 return $this->redirect([
@@ -113,6 +117,10 @@ class WarehouseVoucherController extends Controller
         }
         if ($model->loadAll(request()->post())) {
             if ($model->saveAll()) {
+                $model->total_price = WarehouseVoucherItems::find()
+                    ->where(['warehouse_voucher' => $model->id])
+                    ->sum('total_price');
+                $model->save();
                 set_flash_has_been_saved();
 
                 return $this->redirect([
@@ -257,6 +265,10 @@ class WarehouseVoucherController extends Controller
             $model = $this->findModel($id);
         }
         if ($model->loadAll(request()->post()) && $model->saveAll()) {
+            $model->total_price = WarehouseVoucherItems::find()
+                ->where(['warehouse_voucher' => $model->id])
+                ->sum('total_price');
+            $model->save();
 
             return $this->redirect([
                 'view',

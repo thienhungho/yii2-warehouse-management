@@ -75,9 +75,7 @@ class WarehouseVoucherItems extends BaseWarehouseVoucherItems
             if (empty($this->supplier_quantity)) {
                 $this->supplier_quantity = $this->quantity;
             }
-
             $this->total_price = $this->quantity * $this->product_unit_price;
-
             if (empty($this->supplier_total_price)) {
                 $this->supplier_total_price = $this->total_price;
             }
