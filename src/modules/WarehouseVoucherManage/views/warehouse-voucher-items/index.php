@@ -6,7 +6,7 @@
 
 use yii\helpers\Html;
 use kartik\export\ExportMenu;
-use kartik\grid\GridView;
+use thienhungho\Widgets\models\GridView;
 
 $this->title = Yii::t('app', 'Warehouse Voucher Items');
 $this->params['breadcrumbs'][] = $this->title;

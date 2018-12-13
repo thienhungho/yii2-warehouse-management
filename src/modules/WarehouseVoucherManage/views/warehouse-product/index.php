@@ -4,7 +4,7 @@
 
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-use kartik\grid\GridView;
+use thienhungho\Widgets\models\GridView;
 use yii\helpers\Html;
 
 $this->title = Yii::t('app', 'Warehouse Product');
@@ -60,14 +60,14 @@ $this->registerJs($search);
 <div class="warehouse-product-index">
     <?php
     $gridColumn = [
-        ['class' => 'yii\grid\SerialColumn'],
+        ['class' => '\kartik\grid\SerialColumn'],
         [
             'attribute' => 'id',
             'visible'   => false,
         ],
         grid_checkbox_column(),
         [
-            'class'     => \yii\grid\DataColumn::className(),
+            'class'     => \kartik\grid\DataColumn::className(),
             'format'    => 'raw',
             'attribute' => 'feature_img',
             'value'     => function($model, $key, $index, $column) {
@@ -81,9 +81,16 @@ $this->registerJs($search);
                     'target'    => '_blank',
                 ]);
             },
+            'vAlign'    => GridView::ALIGN_MIDDLE,
         ],
-        'name',
-        'sku',
+        [
+            'attribute' => 'name',
+            'vAlign'    => GridView::ALIGN_MIDDLE,
+        ],
+        [
+            'attribute' => 'sku',
+            'vAlign'    => GridView::ALIGN_MIDDLE,
+        ],
     ];
     $gridColumn[] = grid_view_default_active_column_cofig();
     ?>

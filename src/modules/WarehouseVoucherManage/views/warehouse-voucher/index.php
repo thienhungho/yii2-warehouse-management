@@ -5,7 +5,7 @@
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 use thienhungho\WarehouseManagement\modules\WarehouseBase\WarehouseVoucher;
-use kartik\grid\GridView;
+use thienhungho\Widgets\models\GridView;
 use yii\helpers\Html;
 
 $this->title = Yii::t('app', 'Warehouse Voucher');
